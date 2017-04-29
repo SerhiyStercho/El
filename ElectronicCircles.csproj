@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4CB60D58-1806-4692-9B6B-54761F3B5EFC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ElectronicCircles</RootNamespace>
+    <AssemblyName>ElectronicCircles</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AltoControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AltoControls.1.0.1\lib\AltoControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BigBlueButtonApi, Version=1.0.2.21, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BigBlueButtonApi.1.0.2\lib\net45\BigBlueButtonApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CircularProgressBar, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.2.0.0\lib\net35-Client\CircularProgressBar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.3.5.8\lib\35\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.5.6298.3372, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.5.6298.3372\lib\net35-client\WinFormAnimation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DevelopPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevelopPage.Designer.cs">
+      <DependentUpon>DevelopPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplashScreen.Designer.cs">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Handler.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nameForm.Designer.cs">
+      <DependentUpon>nameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Password.Designer.cs">
+      <DependentUpon>Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Res\AC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AC.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Res\DC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DC.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Res\MKP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MKP.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Res\NS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NS.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Res\PP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PP.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Res\ResourceImages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourceImages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Res\TK.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TK.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Res\Transients.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Transients.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SaveButton.cs" />
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestPage.Designer.cs">
+      <DependentUpon>TestPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestResult.Designer.cs">
+      <DependentUpon>TestResult.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DevelopPage.resx">
+      <DependentUpon>DevelopPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplashScreen.resx">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nameForm.resx">
+      <DependentUpon>nameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Password.resx">
+      <DependentUpon>Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Res\AC.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AC.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Res\DC.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DC.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Res\MKP.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MKP.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Res\NS.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>NS.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Res\PP.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PP.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Res\ResourceImages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourceImages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Res\TK.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TK.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Res\Transients.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Transients.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestPage.resx">
+      <DependentUpon>TestPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestResult.resx">
+      <DependentUpon>TestResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Scripts\bower.json" />
+    <None Include="Scripts\build.log" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r-iconnn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1ps.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2ps.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3ps.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5ps.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6ps.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7ps.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8ps.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9ps.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10ps.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1z.bmp" />
+    <None Include="Resources\2z.bmp" />
+    <None Include="Resources\3z.bmp" />
+    <None Include="Resources\4z.bmp" />
+    <None Include="Resources\5z.bmp" />
+    <None Include="Resources\6z.bmp" />
+    <None Include="Resources\7z.bmp" />
+    <None Include="Resources\9z.bmp" />
+    <None Include="Resources\10z.bmp" />
+    <None Include="Resources\11z.bmp" />
+    <None Include="Resources\12z.bmp" />
+    <None Include="Resources\13z.bmp" />
+    <None Include="Resources\14z.bmp" />
+    <None Include="Resources\15z.bmp" />
+    <None Include="Resources\1tk.bmp" />
+    <None Include="Resources\2tk.bmp" />
+    <None Include="Resources\3tk.bmp" />
+    <None Include="Resources\4tk.bmp" />
+    <None Include="Resources\5tk.bmp" />
+    <None Include="Resources\6tk.bmp" />
+    <None Include="Resources\1mk.bmp" />
+    <None Include="Resources\2mk.bmp" />
+    <None Include="Resources\4mk.bmp" />
+    <None Include="Resources\5mk.bmp" />
+    <None Include="Resources\6mk.bmp" />
+    <None Include="Resources\7mk.bmp" />
+    <None Include="Resources\8mk.bmp" />
+    <None Include="Resources\9mk.bmp" />
+    <None Include="Resources\10mk.bmp" />
+    <None Include="Resources\11mk.bmp" />
+    <None Include="Resources\1ns.bmp" />
+    <None Include="Resources\2ns.bmp" />
+    <None Include="Resources\3ns.bmp" />
+    <None Include="Resources\1pp.bmp" />
+    <None Include="Resources\2pp.bmp" />
+    <None Include="Resources\3pp.bmp" />
+    <None Include="Resources\4pp.bmp" />
+    <None Include="Resources\5pp.bmp" />
+    <None Include="Resources\8z.bmp" />
+    <None Include="Resources\3mk.bmp" />
+    <Content Include="Scripts\LICENSE.txt" />
+    <Content Include="Scripts\polymer-micro.html" />
+    <Content Include="Scripts\polymer-mini.html" />
+    <Content Include="Scripts\polymer.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
