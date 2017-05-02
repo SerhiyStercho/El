@@ -37,8 +37,12 @@
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.ans5 = new MetroFramework.Controls.MetroButton();
-            this.circularPB1 = new AltoControls.CircularPB();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.right_answer = new MaterialSkin.Controls.MaterialLabel();
+            this.wrong_answer = new MaterialSkin.Controls.MaterialLabel();
+            this.exitTest = new MaterialSkin.Controls.MaterialFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,24 +154,6 @@
             this.ans5.UseSelectable = true;
             this.ans5.Click += new System.EventHandler(this.ans5_Click);
             // 
-            // circularPB1
-            // 
-            this.circularPB1.AllowText = true;
-            this.circularPB1.AutomaticFontCalculation = true;
-            this.circularPB1.BackColor = System.Drawing.Color.Transparent;
-            this.circularPB1.Location = new System.Drawing.Point(36, 524);
-            this.circularPB1.MaxValue = 100;
-            this.circularPB1.MinimumSize = new System.Drawing.Size(60, 60);
-            this.circularPB1.MinValue = 0;
-            this.circularPB1.Name = "circularPB1";
-            this.circularPB1.ProgressColor = System.Drawing.Color.LightBlue;
-            this.circularPB1.Size = new System.Drawing.Size(140, 140);
-            this.circularPB1.Stroke = 10;
-            this.circularPB1.TabIndex = 21;
-            this.circularPB1.Text = "circularPB1";
-            this.circularPB1.Transparency = true;
-            this.circularPB1.Value = 0;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -181,12 +167,92 @@
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
+            // materialLabel1
+            // 
+            this.materialLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.BackColor = System.Drawing.Color.Red;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(3, 553);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(106, 19);
+            this.materialLabel1.TabIndex = 21;
+            this.materialLabel1.Text = "Неправильно";
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.BackColor = System.Drawing.Color.LimeGreen;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel2.Location = new System.Drawing.Point(745, 553);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(89, 19);
+            this.materialLabel2.TabIndex = 22;
+            this.materialLabel2.Text = "Правильно";
+            this.materialLabel2.Click += new System.EventHandler(this.materialLabel2_Click);
+            // 
+            // right_answer
+            // 
+            this.right_answer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.right_answer.AutoSize = true;
+            this.right_answer.Depth = 0;
+            this.right_answer.Font = new System.Drawing.Font("Roboto", 11F);
+            this.right_answer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.right_answer.Location = new System.Drawing.Point(722, 553);
+            this.right_answer.MouseState = MaterialSkin.MouseState.HOVER;
+            this.right_answer.Name = "right_answer";
+            this.right_answer.Size = new System.Drawing.Size(17, 19);
+            this.right_answer.TabIndex = 23;
+            this.right_answer.Text = "0";
+            this.right_answer.Click += new System.EventHandler(this.materialLabel3_Click);
+            // 
+            // wrong_answer
+            // 
+            this.wrong_answer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.wrong_answer.AutoSize = true;
+            this.wrong_answer.Depth = 0;
+            this.wrong_answer.Font = new System.Drawing.Font("Roboto", 11F);
+            this.wrong_answer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.wrong_answer.Location = new System.Drawing.Point(115, 553);
+            this.wrong_answer.MouseState = MaterialSkin.MouseState.HOVER;
+            this.wrong_answer.Name = "wrong_answer";
+            this.wrong_answer.Size = new System.Drawing.Size(17, 19);
+            this.wrong_answer.TabIndex = 23;
+            this.wrong_answer.Text = "0";
+            // 
+            // exitTest
+            // 
+            this.exitTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.exitTest.AutoSize = true;
+            this.exitTest.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.exitTest.Depth = 0;
+            this.exitTest.Location = new System.Drawing.Point(682, 656);
+            this.exitTest.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.exitTest.MouseState = MaterialSkin.MouseState.HOVER;
+            this.exitTest.Name = "exitTest";
+            this.exitTest.Primary = false;
+            this.exitTest.Size = new System.Drawing.Size(132, 36);
+            this.exitTest.TabIndex = 24;
+            this.exitTest.Text = "Завершити тест";
+            this.exitTest.UseVisualStyleBackColor = true;
+            // 
             // TestPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(838, 698);
-            this.Controls.Add(this.circularPB1);
+            this.Controls.Add(this.exitTest);
+            this.Controls.Add(this.wrong_answer);
+            this.Controls.Add(this.right_answer);
+            this.Controls.Add(this.materialLabel2);
+            this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.materialFlatButton2);
             this.Controls.Add(this.materialFlatButton1);
             this.Controls.Add(this.ans5);
@@ -200,6 +266,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "TestPage";
             this.Text = "Тест";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TestPage_FormClosing);
             this.Load += new System.EventHandler(this.TestPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -219,6 +286,10 @@
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
         private MetroFramework.Controls.MetroButton ans5;
-        private AltoControls.CircularPB circularPB1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialLabel right_answer;
+        private MaterialSkin.Controls.MaterialLabel wrong_answer;
+        private MaterialSkin.Controls.MaterialFlatButton exitTest;
     }
 }

@@ -19,26 +19,30 @@ namespace ElectronicCircles
         const int pp = 5;
         const int ns = 3;
         const int mkp = 10;
-        private  int[] ans_ps = { 2, 4, 4, 2, 4, 3, 4, 4, 3, 4 };
+        private int[] ans_ps = { 2, 4, 4, 2, 4, 3, 4, 4, 3, 4 };
         private int[] ans_zs = {4,3,3,3,4,4,4,4,1,4,1,4,1,4,2};
         private int[] ans_tk = { 1,2,3,4,4,4 };
         private int[] ans_ns = {3,3,4};
         private int[] ans_pp = { 3, 3, 4 };
         private int[] ans_mkp = {1,4,1,4,4,4,4,4,2,2,1};
         private int[] loader;
-        int[] ans_ps_logic = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
-
-        int ans_ps_kol = 0;
-
+        private int ans_kol = 0;
+        private List<Button> answerButtons = new List<Button>();
         private List<Image> list = new List<Image>();
-        private Button buttonWasClick;
         private int num = 1;
+        private int wrong = 0;
+        private int right = 0;
         private int N1;
- 
+        SaveButton save = new SaveButton();
         public TestPage()
         {
             CallLast.callbackEventHandler = new CallLast.callbackEvent(this.setTheme);
             InitializeComponent();
+            answerButtons.Add(ans1);
+            answerButtons.Add(ans2);
+            answerButtons.Add(ans3);
+            answerButtons.Add(ans4);
+            answerButtons.Add(ans5);
         }
      
         private void setTheme(string title) {
@@ -167,9 +171,17 @@ namespace ElectronicCircles
                     num--;
                     question1.Text = num.ToString();
                     pictureBox1.Image = list[num - 1];
-                    //circularPB1.Value = (int)((N1/num) * 10);
-
+                //SaveButton sve = new SaveButton(num-1);
+                    save.addIndex(num-1);
+                    reloadButtons(save.getArrayOfBool());
                 }
+        }
+
+        private void reloadButtons(bool[] arrayOfButton)
+        {
+            for (int i = 0; i < answerButtons.Count; i++) {
+                answerButtons[i].Enabled = arrayOfButton[i];
+            }
         }
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
@@ -180,7 +192,9 @@ namespace ElectronicCircles
                 setBut();
                 question1.Text = num.ToString();
                 pictureBox1.Image = list[num-1];
-                //circularPB1.Value = (int)((N1/num) * 10);
+                // SaveButton sve = new SaveButton(num - 1);
+                //save.addIndex(num-1);
+                //reloadButtons(save.getArrayOfBool());
             }
         }
         // Загрузка форми
@@ -192,60 +206,93 @@ namespace ElectronicCircles
         //////
         private void ans1_Click(object sender, EventArgs e)
         {
-            buttonWasClick = (Button)sender;
-            guess(1,buttonWasClick);
+           
+            guess(1, (Button)sender);
         }
 
         private void ans2_Click(object sender, EventArgs e)
         {
-            buttonWasClick = (Button)sender;
-            guess(2,buttonWasClick);
+            guess(2, (Button)sender);
         }
         // Якби 3тя кнопка
         private void metroButton4_Click(object sender, EventArgs e)
         {
-            buttonWasClick = (Button)sender;
-            guess(3,buttonWasClick);
+            guess(3, (Button)sender);
         }
 
         private void ans4_Click(object sender, EventArgs e)
         {
-            buttonWasClick = (Button)sender;
-            guess(4,buttonWasClick);
+            guess(4, (Button)sender);
         }
 
         private void ans5_Click(object sender, EventArgs e)
         {
-            buttonWasClick = (Button)sender;
-            guess(5,buttonWasClick);
+            guess(5,(Button)sender);
         }
-        /////
+        //////////
         private void guess(int buttonNumber,Button answerButton) {
-
+            ans_kol++;
             if (loader[num-1] == buttonNumber)
             {
-                ans_ps_kol++;
-                ans_ps_logic[num - 1]++;
-                ans1.Enabled = false;
-                ans2.Enabled = false;
-                ans3.Enabled = false;
-                ans4.Enabled = false;
-                ans5.Enabled = false;
+                right++;
+                right_answer.Text = right.ToString();
+                for (int i = 0; i < (answerButtons.Count); i++) {
+                    if (i != buttonNumber - 1) {
+                        answerButtons[i].Enabled = false;
+                    }
+                }
+                save.addButton(ans1.Enabled, ans2.Enabled, ans3.Enabled, ans4.Enabled, ans5.Enabled);
                 answerButton.BackColor = Color.Blue;
 
             }
             else
             {
-                ans_ps_logic[num - 1]--;
+                wrong++;
+                wrong_answer.Text = wrong.ToString();
+                for (int i = 0; i < (answerButtons.Count); i++)
+                {
+                    if (i != buttonNumber-1)
+                    {
+                        answerButtons[i].Enabled = false;
+                    }
+                }
+                save.addButton(ans1.Enabled, ans2.Enabled, ans3.Enabled, ans4.Enabled, ans5.Enabled);
                 answerButton.BackColor = Color.Red;
             }
         }
+        ////////////////////////
+     
+        ////////////////////////
+        ////////////////////////
+        ////////////////////////
+        ////////////////////////
         private void setBut() {
-            ans1.Enabled = true;
-            ans2.Enabled = true;
-            ans3.Enabled = true;
-            ans4.Enabled = true;
-            ans5.Enabled = true;
+
+            //if (num < save.one.Count)
+            //{
+                ans1.Enabled = true;
+                ans2.Enabled = true;
+                ans3.Enabled = true;
+                ans4.Enabled = true;
+                ans5.Enabled = true;
+            //}
+        }
+
+        private void TestPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (ans_kol != loader.Length) {
+                MetroFramework.MetroMessageBox.Show(this,"У вас залишилось "+(loader.Length-ans_kol)+" питань.Ви дійсно хочете завершити тест?","Вихід");
+            }
+        }
+
+        private void materialLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
