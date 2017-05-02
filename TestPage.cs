@@ -8,7 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
-
+using System.Threading;
+// МЕГА МОЩНИЙ СУПЕР КОД!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Попередження("Держиться усьо на соплях!Прохання не трогати, по можливості не дихати і не дивитися в сторону коду!!");
+/// <summary>
+/// Створений 02.05.2017
+/// Розробники:
+/// 1) Сегргій Стерчо
+/// 2) Яросляв Козарь
+/// </summary>
 namespace ElectronicCircles
 {
     public partial class TestPage : MetroFramework.Forms.MetroForm
@@ -21,9 +29,9 @@ namespace ElectronicCircles
         const int mkp = 10;
         private int[] ans_ps = { 2, 4, 4, 2, 4, 3, 4, 4, 3, 4 };
         private int[] ans_zs = {4,3,3,3,4,4,4,4,1,4,1,4,1,4,2};
-        private int[] ans_tk = { 1,2,3,4,4,4 };
-        private int[] ans_ns = {3,3,4};
-        private int[] ans_pp = { 3, 3, 4 };
+        private int[] ans_tk = { 1,2,3,4,4,4 };//31
+        private int[] ans_ns = {3,3,4};//35
+        private int[] ans_pp = { 3, 3, 4 };//38
         private int[] ans_mkp = {1,4,1,4,4,4,4,4,2,2,1};
         private int[] loader;
         private int ans_kol = 0;
@@ -171,7 +179,6 @@ namespace ElectronicCircles
                     num--;
                     question1.Text = num.ToString();
                     pictureBox1.Image = list[num - 1];
-                //SaveButton sve = new SaveButton(num-1);
                     save.addIndex(num-1);
                     reloadButtons(save.getArrayOfBool());
                 }
@@ -189,12 +196,11 @@ namespace ElectronicCircles
             if (num < N1)
             {
                 ++num;
-                setBut();
                 question1.Text = num.ToString();
                 pictureBox1.Image = list[num-1];
-                // SaveButton sve = new SaveButton(num - 1);
-                //save.addIndex(num-1);
-                //reloadButtons(save.getArrayOfBool());
+                if (num  <= save.one.Count) return;
+                setBut();
+               
             }
         }
         // Загрузка форми
@@ -234,16 +240,17 @@ namespace ElectronicCircles
             ans_kol++;
             if (loader[num-1] == buttonNumber)
             {
+                
                 right++;
                 right_answer.Text = right.ToString();
                 for (int i = 0; i < (answerButtons.Count); i++) {
-                    if (i != buttonNumber - 1) {
+                    //if (i != buttonNumber - 1) {
                         answerButtons[i].Enabled = false;
-                    }
+                    //}
                 }
                 save.addButton(ans1.Enabled, ans2.Enabled, ans3.Enabled, ans4.Enabled, ans5.Enabled);
-                answerButton.BackColor = Color.Blue;
-
+                //answerButton.BackColor = Color.Blue;
+                incQuestion();
             }
             else
             {
@@ -251,37 +258,53 @@ namespace ElectronicCircles
                 wrong_answer.Text = wrong.ToString();
                 for (int i = 0; i < (answerButtons.Count); i++)
                 {
-                    if (i != buttonNumber-1)
-                    {
+                    //if (i != buttonNumber-1)
+                    //{
                         answerButtons[i].Enabled = false;
-                    }
+                    //}
                 }
                 save.addButton(ans1.Enabled, ans2.Enabled, ans3.Enabled, ans4.Enabled, ans5.Enabled);
-                answerButton.BackColor = Color.Red;
+                incQuestion();
+                //answerButton.BackColor = Color.Red;
             }
         }
         ////////////////////////
-     
+        private void incQuestion() {
+            for (int i=0;i<100;i++) {
+                try
+                {
+                    Thread.Sleep(5);
+                }
+                catch { }
+            }
+            if (num < N1)
+            {
+                ++num;
+                question1.Text = num.ToString();
+                pictureBox1.Image = list[num - 1];
+                //if (num <= save.one.Count) return;
+                setBut();
+
+            }
+        }
         ////////////////////////
         ////////////////////////
         ////////////////////////
         ////////////////////////
         private void setBut() {
-
-            //if (num < save.one.Count)
-            //{
                 ans1.Enabled = true;
                 ans2.Enabled = true;
                 ans3.Enabled = true;
                 ans4.Enabled = true;
                 ans5.Enabled = true;
-            //}
+            
         }
 
         private void TestPage_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (ans_kol != loader.Length) {
+            if (ans_kol != loader.Length  && ans_kol<loader.Length) {
                 MetroFramework.MetroMessageBox.Show(this,"У вас залишилось "+(loader.Length-ans_kol)+" питань.Ви дійсно хочете завершити тест?","Вихід");
+                save.cleanList();
             }
         }
 

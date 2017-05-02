@@ -9,7 +9,7 @@ namespace ElectronicCircles
     [Serializable]
     class SaveButton
     {
-       public  List<bool> one = new List<bool>();
+       public List<bool> one = new List<bool>();
        public List<bool> two = new List<bool>();
        public List<bool> three = new List<bool>();
        public List<bool> four = new List<bool>();
@@ -32,7 +32,7 @@ namespace ElectronicCircles
         }
 
         public bool[] getArrayOfBool() {
-            TestPage test = new TestPage();
+            //TestPage test = new TestPage();
             bool[] barr = new bool[5];
             //if (one.Count!=0) {
                 barr[0] = one[numberInList];
