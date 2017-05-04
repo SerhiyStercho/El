@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Collections;
 using System.Threading;
 // МЕГА МОЩНИЙ СУПЕР КОД!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// Попередження("Держиться усьо на соплях!Прохання не трогати, по можливості не дихати і не дивитися в сторону коду!!");
+// Попередження("Держиться усьо на соплях!Прохання не трогати")
 /// <summary>
 /// Створений 02.05.2017
 /// Розробники:
@@ -270,7 +270,7 @@ namespace ElectronicCircles
         }
         ////////////////////////
         private void incQuestion() {
-            for (int i=0;i<100;i++) {
+            for (int i=0;i<60;i++) {
                 try
                 {
                     Thread.Sleep(5);
@@ -285,6 +285,11 @@ namespace ElectronicCircles
                 //if (num <= save.one.Count) return;
                 setBut();
 
+            }
+            if ((right+wrong) == N1) {
+                TestResult result = new TestResult();
+                result.Show();
+                CallResult.callbackEventHandler(N1,right);
             }
         }
         ////////////////////////
@@ -316,6 +321,14 @@ namespace ElectronicCircles
         private void materialLabel3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void exitTest_Click(object sender, EventArgs e)
+        {
+            TestResult result = new TestResult();
+            result.Show();
+            CallResult.callbackEventHandler(N1, right);
+            this.Close();
         }
     }
 

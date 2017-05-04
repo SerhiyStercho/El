@@ -14,7 +14,19 @@ namespace ElectronicCircles
     {
         public TestResult()
         {
+            CallResult.callbackEventHandler = new CallResult.callbackEvent(this.setProgresResult);
             InitializeComponent();
         }
+
+        private void setProgresResult(int numberQuestion,int numberAnswered) {
+            int precent = (int) (numberAnswered * 100) / numberQuestion;
+            circularPB1.Value = precent;
+        }
+    }
+
+    public static class CallResult
+    {
+        public delegate void callbackEvent(int numnberOfQuestion ,int numberAnswered);
+        public static callbackEvent callbackEventHandler;
     }
 }

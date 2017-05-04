@@ -242,6 +242,7 @@
             this.exitTest.TabIndex = 24;
             this.exitTest.Text = "Завершити тест";
             this.exitTest.UseVisualStyleBackColor = true;
+            this.exitTest.Click += new System.EventHandler(this.exitTest_Click);
             // 
             // TestPage
             // 
