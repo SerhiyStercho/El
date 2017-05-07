@@ -278,6 +278,26 @@ namespace ElectronicCircles
         ////////////////////////
         ////////////////////////
         ////////////////////////
+        private void close()
+        {
+            if (ans_kol != loader.Length && ans_kol < loader.Length)
+            {
+                DialogResult result = MetroFramework.MetroMessageBox.Show(this, "У вас залишилось " + (loader.Length - ans_kol) + " питань.Ви дійсно хочете завершити тест?", "Вихід", MessageBoxButtons.YesNo);
+                if (result == DialogResult.No)
+                {
+                    return;
+                }
+                else
+                {
+                    TestResult res = new TestResult();
+                    res.Show();
+                    CallResult.callbackEventHandler(N1, right);
+                    //this.Close();
+                    save.cleanList();
+                    Close();
+                }
+            }
+        }
         ////////////////////////
         private void setBut() {
                 ans1.Enabled = true;
@@ -290,10 +310,7 @@ namespace ElectronicCircles
 
         private void TestPage_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (ans_kol != loader.Length  && ans_kol<loader.Length) {
-                MetroFramework.MetroMessageBox.Show(this,"У вас залишилось "+(loader.Length-ans_kol)+" питань.Ви дійсно хочете завершити тест?","Вихід");
-                save.cleanList();
-            }
+           
         }
 
         private void materialLabel2_Click(object sender, EventArgs e)
@@ -308,10 +325,7 @@ namespace ElectronicCircles
 
         private void exitTest_Click(object sender, EventArgs e)
         {
-            TestResult result = new TestResult();
-            result.Show();
-            CallResult.callbackEventHandler(N1, right);
-            this.Close();
+            close();
         }
 
         private void next_Click(object sender, EventArgs e)

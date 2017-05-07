@@ -21,6 +21,7 @@ namespace ElectronicCircles
         private void setProgresResult(int numberQuestion,int numberAnswered) {
             int precent = (int) (numberAnswered * 100) / numberQuestion;
             circularPB1.Value = precent;
+            resultat.Text = "Ви набрали " + numberAnswered + " із " + numberQuestion + " балів";
         }
     }
 

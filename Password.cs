@@ -19,7 +19,7 @@ namespace ElectronicCircles
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
-            if (pass.Text.ToString() == "PiderasBlyat")
+            if (pass.Text.ToString() == "O4ko")
             {
                 DevelopPage dev = new DevelopPage();
                 dev.Show();

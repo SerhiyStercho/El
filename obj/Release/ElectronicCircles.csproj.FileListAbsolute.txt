@@ -34,3 +34,5 @@ C:\Users\kombo\Documents\Visual Studio 2015\Projects\ElectronicCircles\Electroni
 C:\Users\kombo\Documents\Visual Studio 2015\Projects\ElectronicCircles\ElectronicCircles\obj\Release\ElectronicCircles.csproj.GenerateResource.Cache
 C:\Users\kombo\Documents\Visual Studio 2015\Projects\ElectronicCircles\ElectronicCircles\obj\Release\ElectronicCircles.exe
 C:\Users\kombo\Documents\Visual Studio 2015\Projects\ElectronicCircles\ElectronicCircles\obj\Release\ElectronicCircles.pdb
+C:\Users\kombo\Documents\Visual Studio 2015\Projects\ElectronicCircles\ElectronicCircles\obj\Release\ElectronicCircles.csprojResolveAssemblyReference.cache
+C:\Users\kombo\Documents\Visual Studio 2015\Projects\ElectronicCircles\ElectronicCircles\obj\Release\ElectronicCircles.ButB.resources

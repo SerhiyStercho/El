@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestPage));
             this.question1 = new MetroFramework.Controls.MetroButton();
             this.ans1 = new MetroFramework.Controls.MetroButton();
             this.ans2 = new MetroFramework.Controls.MetroButton();
@@ -244,6 +245,7 @@
             this.Controls.Add(this.ans1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.question1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TestPage";
             this.Text = "Тест";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TestPage_FormClosing);

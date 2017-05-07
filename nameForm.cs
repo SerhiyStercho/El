@@ -84,13 +84,7 @@ namespace ElectronicCircles
 
         private void nameForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-           /* Main enable = new Main();
-            enable.free();
-            enable.ShowDialog();*/
-            /*CallBack.callbackEventHandler(inputName.Text.ToString());
-            TestPage test = new TestPage();
-            test.Show();
-            CallLast.callbackEventHandler(middleSender);*/
+            CallBack.callbackEventHandler(inputName.Text.ToString());
         }
     }
     public static class Call

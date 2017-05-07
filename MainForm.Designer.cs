@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
@@ -100,7 +101,7 @@
             // 
             this.nameofstudent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.nameofstudent.AutoSize = true;
-            this.nameofstudent.Location = new System.Drawing.Point(506, 97);
+            this.nameofstudent.Location = new System.Drawing.Point(467, 97);
             this.nameofstudent.Name = "nameofstudent";
             this.nameofstudent.Size = new System.Drawing.Size(0, 0);
             this.nameofstudent.TabIndex = 1;
@@ -204,6 +205,7 @@
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.menuStrip1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
             this.Text = "Електричні та магнітні кола";
@@ -218,10 +220,10 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroButton metroButton3;
-        private MetroFramework.Controls.MetroButton metroButton4;
+        public MetroFramework.Controls.MetroButton metroButton1;
+        public MetroFramework.Controls.MetroButton metroButton2;
+        public MetroFramework.Controls.MetroButton metroButton3;
+        public MetroFramework.Controls.MetroButton metroButton4;
         private MetroFramework.Controls.MetroLabel nameofstudent;
         private MetroFramework.Components.MetroStyleManager metroStyleManager1;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -231,8 +233,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem вихідToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem сторінкаРозробникаToolStripMenuItem;
-        private MetroFramework.Controls.MetroButton metroButton5;
-        private MetroFramework.Controls.MetroButton metroButton6;
+        public MetroFramework.Controls.MetroButton metroButton5;
+        public MetroFramework.Controls.MetroButton metroButton6;
     }
 }
 

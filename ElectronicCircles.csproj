@@ -388,6 +388,7 @@
     <None Include="Resources\next.png" />
     <None Include="Resources\back2.png" />
     <None Include="Resources\next2.png" />
+    <Content Include="fileFolder\pagein.txt" />
     <Content Include="Scripts\LICENSE.txt" />
     <Content Include="Scripts\polymer-micro.html" />
     <Content Include="Scripts\polymer-mini.html" />
