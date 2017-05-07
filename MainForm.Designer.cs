@@ -135,33 +135,33 @@
             // проПрограмуToolStripMenuItem
             // 
             this.проПрограмуToolStripMenuItem.Name = "проПрограмуToolStripMenuItem";
-            this.проПрограмуToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.проПрограмуToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.проПрограмуToolStripMenuItem.Text = "Про програму";
             this.проПрограмуToolStripMenuItem.Click += new System.EventHandler(this.проПрограмуToolStripMenuItem_Click);
             // 
             // налаштуванняToolStripMenuItem
             // 
             this.налаштуванняToolStripMenuItem.Name = "налаштуванняToolStripMenuItem";
-            this.налаштуванняToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.налаштуванняToolStripMenuItem.Text = "Налаштування";
+            this.налаштуванняToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.налаштуванняToolStripMenuItem.Text = "Оцінка продуктивності";
             this.налаштуванняToolStripMenuItem.Click += new System.EventHandler(this.налаштуванняToolStripMenuItem_Click);
             // 
             // сторінкаРозробникаToolStripMenuItem
             // 
             this.сторінкаРозробникаToolStripMenuItem.Name = "сторінкаРозробникаToolStripMenuItem";
-            this.сторінкаРозробникаToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.сторінкаРозробникаToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.сторінкаРозробникаToolStripMenuItem.Text = "Сторінка розробника";
             this.сторінкаРозробникаToolStripMenuItem.Click += new System.EventHandler(this.сторінкаРозробникаToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(189, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(197, 6);
             // 
             // вихідToolStripMenuItem
             // 
             this.вихідToolStripMenuItem.Name = "вихідToolStripMenuItem";
-            this.вихідToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.вихідToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.вихідToolStripMenuItem.Text = "Вихід";
             this.вихідToolStripMenuItem.Click += new System.EventHandler(this.вихідToolStripMenuItem_Click);
             // 

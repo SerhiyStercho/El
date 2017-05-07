@@ -28,31 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.question1 = new MetroFramework.Controls.MetroButton();
             this.ans1 = new MetroFramework.Controls.MetroButton();
             this.ans2 = new MetroFramework.Controls.MetroButton();
             this.ans3 = new MetroFramework.Controls.MetroButton();
             this.ans4 = new MetroFramework.Controls.MetroButton();
-            this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.ans5 = new MetroFramework.Controls.MetroButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.right_answer = new MaterialSkin.Controls.MaterialLabel();
             this.wrong_answer = new MaterialSkin.Controls.MaterialLabel();
             this.exitTest = new MaterialSkin.Controls.MaterialFlatButton();
+            this.next = new MetroFramework.Controls.MetroButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.backnew2 = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Location = new System.Drawing.Point(20, 60);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(798, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // question1
             // 
@@ -109,40 +100,6 @@
             this.ans4.UseSelectable = true;
             this.ans4.Click += new System.EventHandler(this.ans4_Click);
             // 
-            // materialFlatButton1
-            // 
-            this.materialFlatButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialFlatButton1.AutoSize = true;
-            this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.Location = new System.Drawing.Point(491, 668);
-            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton1.Name = "materialFlatButton1";
-            this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(28, 36);
-            this.materialFlatButton1.TabIndex = 19;
-            this.materialFlatButton1.Text = "-->";
-            this.materialFlatButton1.UseVisualStyleBackColor = true;
-            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
-            // 
-            // materialFlatButton2
-            // 
-            this.materialFlatButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.materialFlatButton2.AutoSize = true;
-            this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton2.Depth = 0;
-            this.materialFlatButton2.Location = new System.Drawing.Point(332, 668);
-            this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton2.Name = "materialFlatButton2";
-            this.materialFlatButton2.Primary = false;
-            this.materialFlatButton2.Size = new System.Drawing.Size(28, 36);
-            this.materialFlatButton2.TabIndex = 20;
-            this.materialFlatButton2.Text = "<--";
-            this.materialFlatButton2.UseVisualStyleBackColor = true;
-            this.materialFlatButton2.Click += new System.EventHandler(this.materialFlatButton2_Click);
-            // 
             // ans5
             // 
             this.ans5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -153,19 +110,6 @@
             this.ans5.Text = "5";
             this.ans5.UseSelectable = true;
             this.ans5.Click += new System.EventHandler(this.ans5_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Location = new System.Drawing.Point(24, 88);
-            this.pictureBox1.MinimumSize = new System.Drawing.Size(791, 432);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(791, 432);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
             // 
             // materialLabel1
             // 
@@ -244,18 +188,55 @@
             this.exitTest.UseVisualStyleBackColor = true;
             this.exitTest.Click += new System.EventHandler(this.exitTest_Click);
             // 
+            // next
+            // 
+            this.next.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.next.BackgroundImage = global::ElectronicCircles.ButB.next2;
+            this.next.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.next.Location = new System.Drawing.Point(490, 669);
+            this.next.Name = "next";
+            this.next.Size = new System.Drawing.Size(27, 23);
+            this.next.TabIndex = 26;
+            this.next.UseSelectable = true;
+            this.next.Click += new System.EventHandler(this.next_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Location = new System.Drawing.Point(24, 81);
+            this.pictureBox1.MinimumSize = new System.Drawing.Size(791, 432);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(791, 439);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
+            // backnew2
+            // 
+            this.backnew2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.backnew2.BackgroundImage = global::ElectronicCircles.ButB.back2;
+            this.backnew2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.backnew2.Location = new System.Drawing.Point(334, 669);
+            this.backnew2.Name = "backnew2";
+            this.backnew2.Size = new System.Drawing.Size(27, 23);
+            this.backnew2.TabIndex = 27;
+            this.backnew2.UseSelectable = true;
+            this.backnew2.Click += new System.EventHandler(this.backnew2_Click);
+            // 
             // TestPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(838, 698);
+            this.Controls.Add(this.backnew2);
+            this.Controls.Add(this.next);
             this.Controls.Add(this.exitTest);
             this.Controls.Add(this.wrong_answer);
             this.Controls.Add(this.right_answer);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
-            this.Controls.Add(this.materialFlatButton2);
-            this.Controls.Add(this.materialFlatButton1);
             this.Controls.Add(this.ans5);
             this.Controls.Add(this.ans4);
             this.Controls.Add(this.ans3);
@@ -263,8 +244,6 @@
             this.Controls.Add(this.ans1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.question1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "TestPage";
             this.Text = "Тест";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TestPage_FormClosing);
@@ -276,21 +255,19 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private MetroFramework.Controls.MetroButton question1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroButton ans1;
         private MetroFramework.Controls.MetroButton ans2;
         private MetroFramework.Controls.MetroButton ans3;
         private MetroFramework.Controls.MetroButton ans4;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
         private MetroFramework.Controls.MetroButton ans5;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel right_answer;
         private MaterialSkin.Controls.MaterialLabel wrong_answer;
         private MaterialSkin.Controls.MaterialFlatButton exitTest;
+        private MetroFramework.Controls.MetroButton next;
+        private MetroFramework.Controls.MetroButton backnew2;
     }
 }

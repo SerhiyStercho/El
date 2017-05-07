@@ -63,7 +63,7 @@ namespace ElectronicCircles
             if (name.IndexOf(ruslan) > -1)
             {
                 MetroFramework.MetroMessageBox.Show(this, "Вийгшев - вийшов!", "ОК");
-                Application.Exit();
+                //Application.Exit();
             }
             if (String.IsNullOrEmpty(name))
             {
@@ -84,7 +84,13 @@ namespace ElectronicCircles
 
         private void nameForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            
+           /* Main enable = new Main();
+            enable.free();
+            enable.ShowDialog();*/
+            /*CallBack.callbackEventHandler(inputName.Text.ToString());
+            TestPage test = new TestPage();
+            test.Show();
+            CallLast.callbackEventHandler(middleSender);*/
         }
     }
     public static class Call

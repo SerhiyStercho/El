@@ -27,12 +27,12 @@ namespace ElectronicCircles
         const int pp = 5;
         const int ns = 3;
         const int mkp = 10;
-        private int[] ans_ps = { 2, 4, 4, 2, 4, 3, 4, 4, 3, 4 };
-        private int[] ans_zs = {4,3,3,3,4,4,4,4,1,4,1,4,1,4,2};
-        private int[] ans_tk = { 1,2,3,4,4,4 };//31
-        private int[] ans_ns = {3,3,4};//35
-        private int[] ans_pp = { 3, 3, 4 };//38
-        private int[] ans_mkp = {1,4,1,4,4,4,4,4,2,2,1};
+        private int[] ans_ps = { 2, 4, 4, 2, 4, 3, 4, 4, 3, 4 };//добре
+        private int[] ans_zs = {4,3,3,3,4,4,4,4,1,4,1,4,1,4,2};//добре
+        private int[] ans_tk = { 1,2,3,4,4,4 };//добре
+        private int[] ans_ns = {3,3,4};//35 добре
+        private int[] ans_pp = { 4, 4, 2,4,4 };//good
+        private int[] ans_mkp = {1,4,1,4,4,4,4,4,2,2}; //good
         private int[] loader;
         private int ans_kol = 0;
         private List<Button> answerButtons = new List<Button>();
@@ -81,8 +81,7 @@ namespace ElectronicCircles
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            question1.Text = num.ToString();
-            pictureBox1.Image = Res.DC._1;
+            
         }
 
         private void setDC() {
@@ -165,23 +164,10 @@ namespace ElectronicCircles
             list.Add(Res.MKP._10mk);
             N1 = mkp;
             pictureBox1.Image = list[0];
-
         }
         private void ans3_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void materialFlatButton2_Click(object sender, EventArgs e)
-        {
-                if (num > 1)
-                {
-                    num--;
-                    question1.Text = num.ToString();
-                    pictureBox1.Image = list[num - 1];
-                    save.addIndex(num-1);
-                    reloadButtons(save.getArrayOfBool());
-                }
         }
 
         private void reloadButtons(bool[] arrayOfButton)
@@ -191,18 +177,7 @@ namespace ElectronicCircles
             }
         }
 
-        private void materialFlatButton1_Click(object sender, EventArgs e)
-        {
-            if (num < N1)
-            {
-                ++num;
-                question1.Text = num.ToString();
-                pictureBox1.Image = list[num-1];
-                if (num  <= save.one.Count) return;
-                setBut();
-               
-            }
-        }
+     
         // Загрузка форми
         private void TestPage_Load(object sender, EventArgs e)
         {
@@ -277,6 +252,7 @@ namespace ElectronicCircles
                 }
                 catch { }
             }
+            //enableNext();
             if (num < N1)
             {
                 ++num;
@@ -291,6 +267,13 @@ namespace ElectronicCircles
                 result.Show();
                 CallResult.callbackEventHandler(N1,right);
             }
+        }
+
+        private void enableNext() {
+            if (num > save.one.Count-1) {
+                next.Enabled = false;
+            }
+            else if (num == save.one.Capacity-1) { next.Enabled = true; }
         }
         ////////////////////////
         ////////////////////////
@@ -329,6 +312,35 @@ namespace ElectronicCircles
             result.Show();
             CallResult.callbackEventHandler(N1, right);
             this.Close();
+        }
+
+        private void next_Click(object sender, EventArgs e)
+        {
+            if (ans1.Enabled==true) { return; }
+            if (num < N1)
+            {
+                ++num;
+                //enableNext();
+                question1.Text = num.ToString();
+                pictureBox1.Image = list[num - 1];
+                if (num <= save.one.Count) return;
+                setBut();
+
+            }
+        }
+
+        private void backnew2_Click(object sender, EventArgs e)
+        {
+            if (num > 1)
+            {
+                num--;
+                question1.Text = num.ToString();
+                pictureBox1.Image = list[num - 1];
+                save.addIndex(num - 1);
+                reloadButtons(save.getArrayOfBool());
+               // enableNext();
+                //next.Enabled = true;
+            }
         }
     }
 

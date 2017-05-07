@@ -35,3 +35,4 @@ C:\Users\kombo\Documents\Visual Studio 2015\Projects\ElectronicCircles\Electroni
 C:\Users\kombo\Documents\Visual Studio 2015\Projects\ElectronicCircles\ElectronicCircles\obj\Debug\ElectronicCircles.Res.NS.resources
 C:\Users\kombo\Documents\Visual Studio 2015\Projects\ElectronicCircles\ElectronicCircles\obj\Debug\ElectronicCircles.Res.PP.resources
 C:\Users\kombo\Documents\Visual Studio 2015\Projects\ElectronicCircles\ElectronicCircles\obj\Debug\ElectronicCircles.Res.TK.resources
+C:\Users\kombo\Documents\Visual Studio 2015\Projects\ElectronicCircles\ElectronicCircles\obj\Debug\ElectronicCircles.ButB.resources

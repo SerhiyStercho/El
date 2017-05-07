@@ -29,11 +29,11 @@ namespace ElectronicCircles
         public Main()
         {
             CallBack.callbackEventHandler = new CallBack.callbackEvent(this.Reload);
-            Thread load = new Thread(new ThreadStart(Loading));
-            load.Start();
+           // Thread load = new Thread(new ThreadStart(Loading));
+           // load.Start();
             InitializeComponent();
            
-            for (int i = 0; i < 100; i++)
+           /* for (int i = 0; i < 100; i++)
             {
                 Thread.Sleep(5);
             }
@@ -44,16 +44,12 @@ namespace ElectronicCircles
             catch (ThreadAbortException e)
             {
                 Thread.ResetAbort();
-            }
+            }*/
         }
 
-        //Передача даних
-        //public Main(string PIB)
-        //{
-        //    InitializeComponent();
-        //}
+     
        
-        public void Loading() {
+       /* public void Loading() {
             frmSplashScreen frame = new frmSplashScreen();
             try
             {
@@ -64,7 +60,7 @@ namespace ElectronicCircles
                 Thread.ResetAbort();
             }
          
-        }
+        }*/
         void Reload(string param)
         {
             nameofstudent.Text = "Тест проходить: " +param;
@@ -127,9 +123,10 @@ namespace ElectronicCircles
         //магнітні кола та пристрої
         private void metroButton6_Click(object sender, EventArgs e)
         {
-            free_ornot();
+            
             call();
             Call.callbackEventHandler(MCAP);
+            free_ornot();
         }
 
         private void проПрограмуToolStripMenuItem_Click(object sender, EventArgs e)
@@ -156,8 +153,9 @@ namespace ElectronicCircles
             metroButton4.Enabled = false;
             metroButton5.Enabled = false;
             metroButton6.Enabled = false;
+            
         }
-        private void free()
+        public void free()
         {
             metroButton1.Enabled = true;
             metroButton2.Enabled = true;
